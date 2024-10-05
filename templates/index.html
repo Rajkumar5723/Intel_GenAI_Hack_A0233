@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Script Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Script Generator</h1>
+        <form method="POST">
+            <label for="user_input">Topic:</label>
+            <input type="text" id="user_input" name="user_input" required>
+
+            <label for="emotions">Select emotions:</label>
+            <div class="checkbox-group">
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="admiration"> Admiration</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="amusement"> Amusement</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="anger"> Anger</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="annoyance"> Annoyance</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="approval"> Approval</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="caring"> Caring</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="confusion"> Confusion</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="curiosity"> Curiosity</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="desire"> Desire</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="disappointment"> Disappointment</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="disapproval"> Disapproval</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="disgust"> Disgust</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="embarrassment"> Embarrassment</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="excitement"> Excitement</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="fear"> Fear</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="gratitude"> Gratitude</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="grief"> Grief</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="joy"> Joy</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="love"> Love</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="nervousness"> Nervousness</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="neutral"> Neutral</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="optimism"> Optimism</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="pride"> Pride</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="realization"> Realization</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="relief"> Relief</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="remorse"> Remorse</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="sadness"> Sadness</label>
+                <label class="emotion-label"><input type="checkbox" name="emotions" value="surprise"> Surprise</label>
+            </div>
+
+            <label for="question">Any questions about the script?</label>
+            <textarea id="question" name="question" rows="4" placeholder="Ask your question here..."></textarea>
+
+            <input type="submit" value="Generate Script">
+        </form>
+
+        {% if bot_response %}
+        <div class="response">
+            <h2>Bot Response:</h2>
+            <p>{{ bot_response }}</p>
+        </div>
+        {% endif %}
+
+        {% if last_script %}
+        <div class="response">
+            <h3>Generated Script:</h3>
+            <pre>{{ last_script }}</pre>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
