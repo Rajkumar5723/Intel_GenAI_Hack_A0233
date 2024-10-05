@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Analysis</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            background-image: url("static/upload.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .custom-form {
+            max-width: 500px;
+            margin: auto;
+            background-color: transparent;
+        }
+
+        .form-group label {
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            display: block;
+        }
+
+        .form-control {
+            text-align: center;
+        }
+
+        .btn-3d {
+            display: inline-block;
+            padding: 8px 20px;
+            font-size: 18px;
+            line-height: 1.3333333;
+            border-radius: 6px;
+            transition: transform 0.2s;
+            background-color: #007bff;
+            color: #fff;
+            border: 1px solid #007bff;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .btn-3d:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-3d:active {
+            transform: scale(0.95);
+        }
+
+        h1 {
+            font-family: 'Algerian', serif;
+            color: #DE0AAA;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .footer-container {
+            color: white;
+            font-size: x-small;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            .box {
+                max-width: 80%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .box {
+                max-width: 90%;
+            }
+
+            .btn-3d {
+                font-size: 16px;
+                padding: 6px 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                max-width: 95%;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 0.9rem;
+            }
+
+            .btn-3d {
+                font-size: 14px;
+                padding: 5px 14px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .box {
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 0.8rem;
+            }
+
+            .btn-3d {
+                font-size: 12px;
+                padding: 4px 12px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <div class="box">
+            <h1>Logic Analysis</h1>
+            <h2>Without Comments</h2>
+            <form action="/result" method="post" class="custom-form">
+                <div class="form-group">
+                    <label for="youtube_url">YouTube Video URL:</label>
+                    <input type="text" id="youtube_url" name="youtube_url" class="form-control" placeholder="Enter YouTube video URL" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-3d">Analyze</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer-container">
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        <p>Contact: vibehqsentimentalanalysis@gmail.com</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .main-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .feedback {
+            margin-top: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .subsection {
+            margin-left: 20px;
+        }
+        .positive {
+            color: #27ae60;
+        }
+        .negative {
+            color: #c0392b;
+        }
+        .neutral {
+            color: #f39c12;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .conclusion {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-style: italic;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <h1>Analysis Result</h1>
+        <h2>Title: {{ title }}</h2>
+        <div class="feedback">
+            {{ feedback|safe }}
+        </div>
+        <a href="/" class="btn">Back to Home</a>
+    </div>
+</body>
+</html>
