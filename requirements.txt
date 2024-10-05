@@ -1,0 +1,4 @@
+streamlit
+cloudinary
+opencv-python
+numpy
